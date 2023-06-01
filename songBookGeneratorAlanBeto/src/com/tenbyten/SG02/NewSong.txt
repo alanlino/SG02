@@ -1,0 +1,14 @@
+{title:New Song Title}
+{subtitle:New Song Subtitle}
+{key:C}
+{artist:Author Unknown}
+{copyright:Public Domain}
+[C]Lyric [G]lyric [D]lyric
+[C]Lyric [G]lyric [D]lyric
+
+{start_of_chorus}
+[C]Refrain [G]refrain [D]refrain
+[C]Refrain [G]refrain [D]refrain
+{end_of_chorus}
+
+{comment:Printed with Songsheet Generator}

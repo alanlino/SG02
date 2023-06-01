@@ -1,0 +1,1296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Songsheet Generator Release Notes (Mac OS X + Java)</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="UTF-8" />
+	<style type="text/css">
+		body { font-family: sans-serif; }
+		a { text-decoration: none; }
+		.pagetitle { border-bottom: 3px double black; }
+		.copyright { padding: 0.1em 1em 0.1em 1em; background: #fefefe; border: thin solid gray; margin: 1em }
+		.note {padding: 0.3em 1em 0.3em 1em; border: thin solid white; background: #ffffcc; }
+		.major_version { border-right: thin solid black; }
+		.major_version h2 { border-bottom: thin solid black; }
+		.minor_version { margin-left: 2em; margin-right: 1em; }
+		.minor_version dt { margin-left: -2em; padding-left: 2em; font-weight: bold; background: #f4f4f4; }
+		.minor_version dd { padding-bottom: 2em; }
+		.minor_version li { padding-bottom: 0.3em; }
+		ul.notlist { list-style-type: none; }
+		ul.definition { list-style-type: none; margin-bottom: -1em; text-indent: -2em; margin-left: 2em; }
+		table.definition { margin: 0.5em; rules:all; margin-left: 2em; }
+		th { border-bottom: 1px solid #dddddd; background: #eeeeee }
+		td { border-bottom: 1px solid #dddddd; }
+		.inlineindent { margin-left: 2em; margin-bottom: -1em;}
+		.sysreqs p { margin-left: 2em; }
+		.sysreqs em { font-weight: bold; }
+	</style>
+</head>
+<body>
+<div class="pagetitle">
+<h1>Songsheet Generator Release Notes</h1>
+<h2>Version 1.9 for macOS&reg; + the Java&#8482; platform </h2>
+</div>
+
+<div class="copyright">
+<p>Copyright &copy; 1995-2019,
+<a href="https://www.tenbyten.com/software/">Ten by Ten Software</a>.
+</div>
+
+<div class="note">
+<p>
+<em>Note:</em> the contents of this document apply only to the macOS and Java platform 
+versions of Songsheet Generator.  For information about the Microsoft Windows&reg; version, 
+please see <a href="https://www.tenbyten.com/software/songsgen/">the Songsheet Generator web site.</a>
+</div>
+
+<div class="sysreqs">
+	<h3>System Requirements</h3>
+	<p>On macOS, simply drop the app from the disk image into your Applications
+	folder and run it. You don&rsquo;t need to download Java.</p>
+	<p>On other platforms, you will need a Java runtime 1.6 or newer. Go to 
+	<a href="https://java.com/">the Java web site</a>, download, and install the most recent version.
+</div>
+
+<div class="major_version">
+<h2>Songsheet Generator 1.9</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.9.6; October 2019
+</dt>
+<dd>
+<p>Fixes and minor changes:</p>
+<ul>
+<li>Song import will now recognize &ldquo;NC&rdquo; and &ldquo;N.C.&rdquo; as chords.</li>
+<li>Fixed problems with song files using key signatures that do not map to known chords.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.9.5; June 2019
+</dt>
+<dd>
+<p>Fixes and minor changes:</p>
+<ul>
+<li>Fixed an issue in the custom chord editor that made it impossible to define guitar chords with unplayed 5th or 6th strings.</li>
+<li>Removed the transpose option from the options dialog, because it can cause confusion and loss of transpose settings in the songbook/print list.</li>
+<li>Transposing &ldquo;All&rdquo; songs will now only transpose the songs in the songbook/print list, and not in the (left side) song list.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.9.4; April 2019
+</dt>
+<dd>
+<p>Fixes and minor changes:</p>
+<ul>
+<li>Full Screen Presentation can again, optionally, start from the selected song. </li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.9.3; November 2018
+</dt>
+<dd>
+<p>Fixes and minor changes:</p>
+<ul>
+<li>Fixed an issue saving songbooks with songs that were transposed (the transpose value was not saved correctly).</li>
+<li>Transposing to the key of C will show B flat as the minor seventh, instead of A sharp.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.9.2; August 2018
+</dt>
+<dd>
+<p>Fixes and minor changes:<p/>
+<ul>
+<li>Fixed type-ahead navigation in the song lists.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.9.1; July 2018
+</dt>
+<dd>
+<p>Fixes and minor changes:<p/>
+<ul>
+	<li>Fixed a problem reading song files with an empty key signature ({k:}). This caused the song list to display blank, although navigating the list with the keyboard would show the songs one by one.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.9.0; June 2018
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+	<li>Added support for the capo directive. Capo can be printed in the title, footer and comments using the %C formatting code.
+		Adding a capo directive will affect the key signature of the song displayed by Songsheet Generator.
+		For example, with {capo: 2} and {key: D}, the actual concert key of the song is E.
+		With capo <strong>turned on</strong> in the preferences, Songsheet Generator will display the song&rsquo;s key as &ldquo;E (Capo 2)&rdquo; in the song list,
+		and the chords will be based on D (for playing on guitar with a capo on fret 2).
+		With capo <strong>turned off</strong> in the preferences, Songsheet Generator will display this song&rsquo;s key as &ldquo;E&rdquo;
+		and the chords will be based on E (for playing on piano, for instance).</li>
+	<li>Added support for multiple artist directives.</li>
+	<li>Double-clicking a Songsheet Generator Songbook (sgb) file in the Finder will open the songbook (and launch Songsheet Generator, if it is not already running). </li>
+	<li>Added support for the <a href="https://www.chordpro.org/chordpro/Directives-meta.html">ChordPro.org meta directive.</a> This works exactly like the Songsheet Generator data directive.
+		The <a href="https://www.chordpro.org/chordpro/ChordPro-Configuration-Format-Strings.html">ChordPro.org meta formatting codes</a> are not yet supported.</li>
+</ul>
+<p>Fixes and minor changes:<p/>
+<ul>
+	<li>Transposing by half-steps is a little bit smarter about the actual key signature (as regards sharps and flats).</li>
+	<li>Songs with multiple key signature transitions are now shown with an arrow instead of a comma: <b>C&#8594;D</b>.</li>
+	<li>Improved the readability of the &ldquo;Display on Monitor&rdquo; (now: &ldquo;Screen&rdquo;) menu.</li>
+	<li>Fixed an application freeze that could happen when going backwards in the Full Screen Presentation.</li>
+	<li>Fixed a problem that would cause some songs with lines that contained only chords and spaces to stop displaying.</li>
+	<li>Improved the reliability of saving custom chord definitions.</li>
+	<li>Improved the friendliness of saving a modified songbook when opening a different songbook or quitting.</li>
+	<li>Added an informational message when not all of the songs in a newly-opened songbook can be found in the song list.</li>
+	<li>Fixed the indicator of an edited songbook; the circular red close button in the title bar will now contain a dot.</li>
+	<li>The file name of the open songbook is now displayed before &ldquo;Songsheet Generator&rdquo; in the window title bar (instead of within brackets, at the end).</li>
+	<li>Songs with identical names are sorted alphabetically by artist.</li>
+	<li>Updated the embedded Java runtime in the macOS app to the latest version.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="major_version">
+<h2>Songsheet Generator 1.8</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.8.1; October 2017
+</dt>
+<dd>
+<p>Fixes and minor changes:<p/>
+<ul>
+	<li>Fixed menu bar issues when running in German or French on macOS High Sierra (10.13). </li>
+	<li>Fixed some HTML formatting issues with chorus and tab sections. </li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.8.0; March 2017
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+	<li>Improved the songs and print lists: 
+		Artist and key signature are displayed in new columns in the songs list, 
+		and key signature or transposed interval are displayed in a separate column in the print list.
+		Clicking on a column header in the songs list will sort the songs by title, key, or artist.</li>
+	<li>The Java runtime is now embedded within the app bundle on Mac OS X.
+		It is no longer necessary to install Java runtime software separately from Songsheet Generator.</li>
+	<li>For improved security on Mac OS X, Songsheet Generator is signed with the Ten by Ten Mac Developer ID Certificate.</li>
+	<li>Cleaned up the included songs and edited the author, copyright, and key signature.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="major_version">
+<h2>Songsheet Generator 1.7</h2>
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.7.1; January 2017
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+	<li>Added support for &lsquo;smart&rsquo; single or double quotes in title and footer formatting (&lsquo; &rsquo; &ldquo; &rdquo;).</li>
+	<li>Fixed the suggested footer format code that includes the date (the code to show the day of the month was incorrect).</li>
+	<li>Added artist and copyright to the new song template.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.7.0; December 2016
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+	<li>Added support for {artist:} and {copyright:} directives, as their usage has become common in other Chordpro software.</li>
+	<li>Added controls to adjust all aspects of title and subtitle printing, including some preset formatting suggestions.</li> 
+	<li>Artist and Copyright can be printed in the title, footer and comments using %A and %G formatting codes.</li>
+	<li>Added a help dialog for formatting code reference. This dialog can be opened via the menu bar or from the Print and Full Screen Options pages.</li>
+	<li>Added a &lsquo;Fonts&rsquo; sub-menu under the &lsquo;Options&rsquo; menu for more convenient font changes.
+	<li>Added instant font size change with control-plus and control-minus keyboard shortcuts (Mac: &#8984;+ and &#8984;-)</li> 
+</ul>
+<p>Fixes and minor changes:
+<ul>
+	<li>Removed the non-functional footer settings for HTML output.</li>
+	<li>Improved the appearance of fonts in the font settings dialog.</li>
+	<li>The &lsquo;Normal&rsquo; (lyric) font is now selected by default in the font settings dialog.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+<div class="major_version">
+<h2>Songsheet Generator 1.6</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.6.5; May 2015
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+	<li>Footer control codes may now be used in comments ({c:}) and instrumental comments ({gc:}). Any footer formatting control codes may be used in comments, except for the justification codes (%l %c %r) which are ignored.
+	This allows data values to be defined in the song, and printed within the song. The current key signature may also be printed in a comment using the %k format code. (As with footers, use %% to print a percent sign.)</li>
+</ul>
+<p>Fixes and minor changes:
+<ul>
+	<li>Fixed a problem where two Preferences dialogs would appear when running  Oracle&rsquo;s Java, and the shortcut key &#8984;, was used to access the Preferences.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.6.4; February 2015
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+	<li>Repackaged the Mac app bundle to prefer Oracle&rsquo;s Java, 1.7 or newer, for users who do not want to install Apple&rsquo;s unsupported Java 1.6 runtime.</li>
+	<li>Fixed the page range shown in the print dialog.</li>
+	<li>Improved the quality of printed output and chord grid diagrams.</li>
+	<li>Fixed code signing issues on Mac OS X to avoid Gatekeeper warnings.</li>
+	<li>Made it possible to run the Java jarfile without an app bundle on Mac OS X.</li>
+	<li>Fixed the New Song function when running from the Java jarfile.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.6.3; October 2014
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+<li>Solfeggio/solfège (do re mi) key names are now displayed in the &quot;Songs to Print&quot; list and in the Transpose Menu.</li>
+<li>Added font antialiasing in the plain Java version, for improved full screen appearance.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.6.2; August 2013
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+<li>Added the ability to exclude some chord grids from printing.  These can be specified in the Chords/Grids Options page, separated by a space; for example: <code>C D E G</code></li>
+<li>Added controls for the minimum and maximum chord grid sizes, and the space between them.  Chord grids are automatically formatted within these limits.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.6.1; July 2013
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Fixed application freeze due to a recent Mac OS X Java update.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.6.0; December 2012
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+<li>Added built-in chord definitions for Ukulele (standard C6 tuning: G4 C4 E4 A4).</li>
+<li>Added a checkbox to scan for songs in subfolders (the default is to <b>not</b> scan in subfolders).</li>
+<li>Added a &quot;Delete Song&quot; menu item.</li>
+<li>The full screen presentation can, optionally, start from the selected song.</li>
+<li>Rearranged the File menu items so that the commands related to song files are at the top
+(the historical emphasis on songbook-related commands was confusing new users).</li>
+<li>The shortcut keys for &quot;New Song&quot; and &quot;New Songbook&quot; have been swapped.</li>
+<li>Songsheet Generator will now offer to automatically create the songs folder and put the sample file into it, if the songs folder does not exist.
+The default name for the songs folder has been changed to "Songsheet Generator Songs" (from simply "Songs"), to match the Windows version.</li>
+<li>Added key signature to the sample song, &quot;Twinkle Twinkle Little Star.&quot;</li>
+</ul>
+<p>Fixes and minor changes:
+<ul>
+
+<li>Fixed the base fret field in the custom chord editor and chord parser to allow fret values greater than 9.</li>
+<li>Fixed the base fret field in the custom chord editor so that it will not allow typing the value 0. (The smallest fret is number 1.) </li>
+<li>Signed the Mac app bundle for use with Mountain Lion and Gatekeeper.</li>
+<li>Fixed automatic song numbering in the RTF output.</li> 
+</ul>
+</dd>
+</dl>
+</div>
+
+</div>
+<div class="major_version">
+<h2>Songsheet Generator 1.5</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.5.2; August 2010
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Fixed a problem with in-song chord definitions that appeared in version 1.5.1.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.5.1; April 2010
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>The embedded HTML style &quot;Chorus overall&quot; setting is now saved properly.</li>
+<li>Shorthand directives such as &quot;c:&quot; and &quot;t:&quot; are matched more
+strictly (just as in the Windows version).  
+This provides better compatibility with ChordPro songs edited in ChordPro Manager.</li>
+<li>Mac&nbsp;OS&nbsp;X 10.2 and 10.3 are no longer supported.</li>
+<li>Added support for Page Up and Page Down keys in full screen view.</li>
+<li>Fixed the automatic update download so that it would actually open the download link.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.5.0; July 2009
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+<li>Printer margins and tabs can now be set in either metric (mm) or imperial
+(inch) units.</li>
+<li>Multi-monitor support has been added to the program.
+On the Full Screen Options Page, it is now possible to select the desired
+monitor from a list of connected displays.</li>
+<li>Added Rich Text (RTF) output.  
+RTF will retain the font settings and colors from the printed output, as well
+as margins and column settings.  Hyphenation is not supported, and line breaks
+may not match the printed output.  
+<br><em>Please note</em> that RTF is a document exchange format, and does not
+guarantee specific typesetting.  The appearance of the RTF depends on the
+software displaying it, and many programs ignore much of the RTF formatting
+(these programs include WordPad on Windows; and TextEdit, Pages, and QuickLook
+on the Mac).  For best results, view the RTF in Microsoft Word or
+OpenOffice.</li>
+<li>Songsheet Generator now supports multiple key signatures in a file.  When
+more than one {key: } directive is detected in the song, all the keys will be
+shown next to the song title in the print list.  The &quot;Transpose to
+Key&quot; menu will indicate transposition of the main (first) key; all the
+keys will be transposed relative to the transposition that is applied to the
+main key.</li>
+<li>Multiple key signatures can be addressed in the footer using a to adding a
+dash followed by the key number in the song to the usual key directive (%k).
+For example: %k-1 is the first key in the song (and produces the same
+result as %k); %k-2 produces the second key in the song; and so on.</li>
+<li>Added a control to quickly pick the output destination on the main dialog.
+This has the same function as the list of output destinations found in the 
+Options Menu, but is easier to find.</li>
+<li>By default, the table of contents will now print on its own physical page.
+A checkbox on the General Options page will return Songsheet Generator to its
+old behavior, where there was merely some space between the TOC and the first
+song.</li>
+<li>Added a &quot;Reveal Songs in Finder&quot; menu command on the Mac.  This
+command will open a new Finder window displaying the contents of the songs
+folder.</li>
+<li>For registered users, Songsheet Generator will automatically check the Ten
+by Ten website for updates to the software (automatic checking can be disabled,
+if you prefer).</li>
+</ul>
+
+<p>Fixes and minor changes:
+<ul>
+<li>Fixed a problem that would cause song scanning to stop when an unexpected
+file was encountered.</li>
+<li>Fixed the small chord spacing problem caused by hyphenation of lyrics.</li>
+</ul>
+<p>User interface improvements:
+<ul>
+<li>The list and mini-preview panes on the main dialog are now resizable.</li>
+<li>The &quot;usage&quot; column in the data key/value editor now shows the
+format that should be used to produce the data value in the footer.
+(Previously, this column showed how to define the key and value in a song; but
+that was not very useful, since the value was already defined in the editor!)</li>
+<li>Changed the &quot;Songs to Print&quot; List label to indicate that the
+list is equivalent to the contents of the current Songbook.</li>
+<li>Eliminated the &quot;show mini-preview&quot; option and checkbox.</li>
+<li>Eliminated the &quot;double-click-to-remove&quot; 
+behavior of the &quot;Songs to Print&quot; List.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+</div>
+
+<div class="major_version">
+<h2>Songsheet Generator 1.4</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.4.1; October 2008
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Save as ChordPro output will now transpose the key correctly.</li> 
+<li>Fixed incorrect alignment when using a Unicode right single quotation mark character (&#8217;; &amp;#8217; \u2019; UTF-8: (e2, 80, 99)).</li>
+<li>Fixed bad performance when wrapping lines of chords without lyrics.</li>
+<li>Clarified the exclusivity of guitar and ukulele mode by changing the
+checkbox to a pair of radio buttons.</li> 
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.4.0; May 2008
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+<li>Added a Ukulele mode; this will cause chord grids to appear with only four
+strings.  Since there are several tuning options for Ukulele, there are no
+built-in chords; please use the chord editor to define your chords.  It is
+possible to freely switch back and forth between the normal six-sting and
+four-string modes, but all songs will print in the current mode; i.e. there is
+no way to identify a song as a Ukulele- or six-string-only song.</li>
+<li>Added a global data key/value editor.  Key/value pairs defined in this
+editor will be applied to all songs.  By using a global value, it is possible
+to define rarely-changing global text such as an organization name or other
+identifying information.  The editor shows the text that must be entered in the
+song file to make use of the data key/value pair that has been defined.</li>
+<li>Added a &quot;New Song File&quot; command in the File menu.  This will
+create a new file in the songs folder, fill it with a simple ChordPro template,
+and open the text editor.  </li>
+<li>Added a preference to start each song on a new physical page, regardless
+of the page layout style.  A checkbox to control this has been added to the
+Print Options page.  
+(ChordPro note: this has the same function as putting a <code>{npp}</code> at the top of every song.)</li>
+<li>Added a "Save to ChordPro" output option.  This function allows songs to
+be exported with their chords transposed in ChordPro, or without their chords.  
+In effect, the songs will be exported with ChordPro directives that match the print settings.
+Please note that the ChordPro syntax may differ slightly from the syntax in the original song.
+Data values and chord definitions will be retained, but their ordering may be different from the original file.
+This function uses abbreviated ChordPro directives (e.g. &quot;t:&quot; for &quot;title:&quot;).
+Please do not use this function to overwrite your original songs&mdash;it may result in data loss!
+(Songsheet Generator does try to prevent you from doing this.)
+<br><em>Note:</em> If multiple songs are selected into the &quot;Songs to Print&quot; list, they will all
+be saved to a single file, with <code>{ns}</code> directives between them.  
+<br><em>Also Note:</em> If you attempt to bring one of these multiple-songs-per-file
+files back into Songsheet Generator, only the first song title will appear in the songs list.
+</li>
+<li>Lines of chords without lyrics will be wrapped if they exceed the margin,
+just as normal lines are wrapped.</li>
+<li>Song titles may optionally be wrapped, instead of reduced, to fit in a single
+line.  A checkbox to control this has been added to the Print Options page.</li>
+</ul>
+
+<p>Fixes and minor changes:
+<ul>
+<li>The current songbook is now marked as modified when changes are made by
+using the context menu in the print list.</li> 
+<li>Text files will export as UTF-8 according to the setting in the General Options page.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+</div>
+
+<div class="major_version">
+<h2>Songsheet Generator 1.3</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.3.7; November 2007
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Set the default song file encoding to UTF-8 (the default encoding on Mac OS X 10.5).  
+If this causes problems for your songs, please use the checkbox on the General Options page to return to
+the previous Songsheet Generator behavior.  (UTF-16 files will still be detected automatically.)</li> 
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.3.6; November 2007
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Further updates for Mac OS X 10.5 (Leopard), including a new high-resolution icon.</li> 
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.3.5; October 2007
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Fixed a problem where the last chord in a line would repeat when the line wrapped.</li>
+<li>Updated Full Screen Presentation mode for compatibility with Mac OS X 10.5 (Leopard).</li> 
+<li>Fixed an error that occurred when the songs path was changed or refreshed before
+Songsheet Generator had finished scanning the songs folder.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.3.4; August 2007
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Fixed automatic song numbering.</li>
+<li>Songsheet Generator will prompt to save an unsaved songbook before exiting.  
+<br><em>Note:</em> the prompt will only be shown if the songbook has already been saved to a file. </li>
+<li>Revised the songbook format to be compatible with SG for Windows 2.6.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.3.3; August 2007
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Fixed problems when scanning very short song titles beginning with &quot;T&quot; or &quot;A&quot;.</li>
+<li>Added an option to disable the reordering of song titles that begin with &quot;A&quot;, &quot;An&quot; or &quot;The&quot;.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.3.2; July 2007
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Songbooks are now saved in a format that preserves international characters.</li>
+<li>Improved printing performance, which would degrade exponentially with the number of items in the print list.</li>
+<li>Added a progress dialog that indicates printing progress and allows a print job to be cancelled.
+	Some problems were found with this under Java 1.4.2, however, so the progress dialog is only shown when the
+	Java version is J2SE 5.0 or higher.</li>
+<li>Fixed incorrect wrapping of long lines in the Table of Contents.</li>
+<li>Fixed the problem where the Full Screen Presentation would start with a blank screen.</li>
+<li>Updated the online help.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.3.1; June 2007
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Fixed Unicode song file support.  Songsheet Generator can use UTF-16 and UTF-8 song files as long as they have a byte-order mark (BOM).</li>
+<li>File choosers&rsquo; browser pane will now correctly show the current file or directory.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.3.0; June 2007
+</dt>
+<dd>
+<p>New features in this release:</p>
+<ul>
+<li>Added a custom chord definition editor (this has been needed for a long time!).  
+(For those who are in the know about the original <em>chord</em> program, this dialog is an editor for the <em>chordrc</em> file.)</li>
+<li>Added an "Instant Full Screen" function.  This will present the songs selected in the <em>Songs List</em>,
+irrespective of whether or not they have been added to the Print List.</li>
+<li>Updated the Mac OS X look and feel.  Although this increases the size of the distribution, 
+it greatly improves the user experience.</li>
+</ul>
+
+<p>Fixes and minor changes:
+<ul>
+<li>Added an indication in the About Box as to whether or not the application has been registered.
+If the application has been registered, confirmation will be requested before entering a new registration code.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+</div>
+
+
+<div class="major_version">
+<h2>Songsheet Generator 1.2</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.2.1; May 2007
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Updated the Mac OS X version to use Java 1.5, if it is available.</li>
+<li>Further improved the footer text wrapping so that text blocks will tend to fill out more fully from top to bottom.</li>
+<li>Prevented more than one footer from printing on any given page.  
+On pages where more than one song appears, the footer will be created with data from the first song on that page.</li>
+<li>Fixed the guitar comment font color when adjusting all fonts&rsquo; colors for full screen.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.2.0; May 2007
+</dt>
+<dd>
+<p>New features in this release (there are many!):</p>
+<ul>
+	<li>The Mac OS X version is now distributed as a nicer-looking disk image,
+	with a (hopefully) helpful background image containing installation instructions.
+	If you wish to use the sample songs contained on the image,
+	drag the "Songs" folder into your Documents folder.</li>
+	<li>On Mac OS X, Songsheet Generator will first be set to look in a "Songs" 
+	folder inside the Documents folder in your home directory, if this folder exists.</li>
+	<li>Songsheet Generator will now remember the most recently used locations
+	for saving HTML &amp; text files and songbooks, and for importing.</li>
+	<li>Added a thick line chorus marking style.</li>
+
+	<li>Added a <em>Rescan Songs</em> menu item (it&rsquo;s in the File menu).</li>
+	<li>Rescanning songs will now attempt to keep the contents of the print list intact (if the filenames are the same).</li>
+	<li>Added key signature directive. </li>
+	<li>Added <i>Transpose To Key</i> menu.  
+	If the key has been defined for a song, the right-click popup menu in
+	the Print List will display a list of target key signatures (major or
+	minor keys will be shown, as appropriate). </li>
+	<li>If the key signature has been defined for a song, it will show up
+	in brackets before the song title in the Print List.</li>
+	<li>Moved chord and grid options to a dedicated property page in the
+	options dialog. </li>
+	<li>Grids may be limited to only appear only for &quot;friendly&quot; key
+	signatures.  (This will take effect only for songs where the key
+	signature has been defined.)  </li>
+	<li>Added support for generic data key/value directives in the song file.  
+		Keys and their values are noted like this: 
+		<code>{d_<i>abc</i>: <i>xyz</i>}</code> where <i>abc</i> is the key and <i>xyz</i> is the value.
+		This feature can be used for defining tags such as CCLI number, author, etc.
+	</li>
+	<li>Added per-song footer format override support. </li>
+	<li>Added new footer codes for printing key, page numbering with a
+	song, subtitles, and defined data keys/values.  </li>
+	<li>Added conditional footer formatting, via the <code>%?</code> and <code>%?!</code> value query codes.</li>
+	<li>Added support for footer wrapping.</li>
+	<li>Added support for manual line breaks in the footer (put &lsquo;\n&rsquo; in the
+	footer text). </li>
+	<li>The title and subtitle lines may now be flexibly formatted via the registry.  
+	These lines use the same formatting strings as the footer.  The default
+	title format string is <code>%c%t</code>, and the default subtitle
+	format string is <code>%c%s</code>; these mimic the classic Songsheet
+	Generator format.  To get left-justified titles, change them to
+	<code>%l%t</code> and <code>%l%s</code>.  Data keys can also be used,
+	to insert song data.  There are lots of ways to customize the
+	output...!  </li>
+	<li>Added a separate font setting for guitar/intstrumental comments.</li>
+	<li>Made the import more permissive of extra characters in the chord line.</li>
+	<li>Further extended the ChordPro chord definition syntax to support
+	defining chords that apply only to a given key signature.  When defined
+	this way, chords will revert to the standard definition when the song
+	is transposed (or, to another chord defined for the transposed-to key
+	signature).  This is optional; when the &quot;key&quot; keyword is not
+	added to the chord definition, the chord definition will apply to all
+	keys.  The complete chord definition syntax recognized by Songsheet
+	Generator is:
+	  <div class="inlineindent"><code>{define: &lt;chord&gt; base-fret &lt;base&gt; frets &lt;Low-E&gt; &lt;B&gt; &lt;G&gt; &lt;D&gt; &lt;A&gt; &lt;E&gt; fingers &lt;Low-E&gt; &lt;B&gt; &lt;G&gt; &lt;D&gt; &lt;A&gt; &lt;E&gt; key &lt;KEY&gt;}</code></div>
+	  <br>For example:
+	  <div class="inlineindent"><code>{define: E5 base-fret 7 frets 0 1 3 3 x x fingers - 1 2 3 - - key E}</code></div>
+	  <br> All of Songsheet Generator&rsquo;s built-in chord definitions still apply to all keys.</li>
+</ul>
+<p>Summary of new song directives:</p>
+		<table class="definition" rules="all">
+		<thead>
+		<tr><th>Directive</th><th>Description</th></tr>
+		</thead>
+		<tbody>
+		<tr><td><code>{data_<i>abc</i>: <i>xyz</i>}</code></td><td>Data key and value; <i>abc</i> is the key, <i>xyz</i> is its value.</td></tr>
+		<tr><td><code>{f_<i>abc</i>: <i>xyz</i>}</code></td><td>Shorthand for <code>{data_<i>abc</i>: <i>xyz</i>}</code>.</td></tr>
+		<tr><td><code>{footer: <i>xyz</i>}</code></td><td>Footer override for the current song.</td></tr>
+		<tr><td><code>{f: <i>xyz</i>}</code></td><td>Shorthand for <code>{footer: <i>xyz</i>}</code>.</td></tr>
+		<tr><td><code>{key: <i>xyz</i>}</code></td><td>Key the chart is written in; <i>xyz</i> is a valid key; transposition will apply.</td></tr>
+		<tr><td><code>{k: <i>xyz</i>}</code></td><td>Shorthand for <code>{key: <i>xyz</i>}</code>.</td></tr>
+		</tbody>
+		</table>
+<p>Summary of new footer formatting codes:</p>
+		<table class="definition" rules="all">
+		<thead>
+		<tr><th>Code</th><th>Description</th></tr>
+		</thead>
+		<tbody>
+		<tr><td><code>%&rsquo;<i>abc</i>&rsquo;</code></td><td>Data key value
+				(<i>abc</i> is a key; <i>xyz</i>, its value, will be printed).
+				<i>Note:</i> the quotes are required!  
+				</td></tr>
+		<tr><td><code>%?<i>jkl</i>&quot;xyz&quot;</code></td><td>Value query
+				<i>jkl</i> is a format code; if the value of <i>jkl</i> is not empty, then 
+				<i>xyz</i> will be evaluated and printed; <i>xyz</i> may contain nested format codes).
+				<i>Note:</i> the quotes are required!  
+				</td></tr>
+		<tr><td><code>%?!<i>jkl</i>&quot;xyz&quot;</code></td><td>Value query (negative)
+				<i>jkl</i> is a format code; if the value of <i>jkl</i> is empty, then 
+				<i>xyz</i> will be evaluated and printed; <i>xyz</i> may contain nested format codes).
+				<i>Note:</i> the quotes are required!  
+				</td></tr>
+		<!--<tr><td><code>%C</code></td><td>Capo value (if the value is zero: nothing, not even a blank, will print).</td></tr>-->
+		<tr><td><code>%k</code></td><td>Song key (transposition will apply).</td></tr>
+		<tr><td><code>%N</code></td><td>Total number of pages of song.</td></tr>
+		<tr><td><code>%P</code></td><td>Current page number of song.</td></tr>
+		<tr><td><code>%s</code></td><td>Song subtitle.</td></tr>
+		<tr><td><code>%x</code></td><td>Song transpose (in half-steps; if the value is zero: nothing, not even a blank, will be printed).</td></tr>
+		<tr><td><code>\n</code> (backslash followed by 'n')</td><td>Manual line break in the footer.</td></tr>
+		</tbody>
+		</table>
+</p>
+<p>Fixes and minor changes:
+<ul>
+	<li>Fixed a bug that reduced the size of the normal/lyric font when using
+	the auto-adjust feature in the Set Fonts dialog. </li>
+	<li>The title printed on overflow pages will now use the color of the title font
+	(although the rest of the font styling comes from the comment font). </li>
+	<li>Clicking left mouse button once and then quickly clicking the right mouse
+	button to call up the pop-up menu will no longer register as a double-click. </li>
+	<li>Made the thickness of the printed lines (chorus markings and grids) more consistent with the Windows version.</li>
+	<li>If a chord is defined within a song, but the song is transposed:
+	preference will be given to Songsheet Generator&rsquo;s internal definition
+	of the transposed chord, when printing grids.</li>
+	<li>Due to a new method for reigstering title and key/value data, it is
+	necessary to rescan songs for some song file changes to show up in the
+	output.  Songsheet Generator previously re-read the entire song file
+	when printing or previewing; this is no longer completely true.</li>
+	<li>In previous versions, a value of 0 for transposition would print as
+	'0' when %x was defined in the footer.  As of version 1.2.0, nothing
+	(not even a blank) will be printed if the transposition value is
+	zero.</li>
+	<li>Fixed a problem with blank lines in guitar tab sections in HTML output.</li>
+	<li>Updated the sample song in the documentation.</li>
+</ul>
+</p>
+</dd>
+</dl>
+</div>
+
+</div>
+
+<div class="major_version">
+<h2>Songsheet Generator 1.1</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.1.3; November 2006
+</dt>
+<dd>
+<p> New features in this release:
+<ul>
+	<li>Added a combination line-and-tab chorus marking style.</li>
+</ul>
+<p>Fixes and minor changes:
+<ul>
+	<li>Fixed a problem that sometimes caused the first chord symbol to be shifted up one line.
+		This problem was due to the "Automatically single-space lines with no chords or lyrics" option;
+		the option has been removed from the program. </li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.1.2; April 2006
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+	<li>Corrected a problem where more than one undefined chord in a line would cause chord
+	names to be printed incorrectly.</li>
+	<li>Corrected some potentially major song file handle leaks.
+	These leaks might prevent an external song editor from saving a song after
+	Songsheet Generator had displayed that song.	</li>
+	<li>Corrected Italian Notation <i>"So"</i> to <i>"Sol"</i> and <i>"Ti"</i> to <i>"Si".</i></li>
+	<li>Chords appearing without lyrics on the last line of a song file will now print correctly,
+		even when chord grids are being printed.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.1.0; March 2006
+</dt>
+<dd>
+<p> New features in this release:
+<ul>
+<li>Improved font control is available through an extended dialog on the Print and Full Screen Options pages.
+Please see the online help for further details.
+</li>
+<li>Tab characters in song files are now expanded to a user-definable space.  Separate spacing values are
+available on both the Print and Full Screen Options pages; 
+the Print spacing value is based on inches, and the Full Screen spacing value is based on a percentage of the screen.
+</li>
+<li>Chords can now optionally be shown in Italian Notation (do re mi fa so la ti).  
+A checkbox on the General Options page controls this behavior, which performs the change 
+to Italian Notation when the songs are printed or displayed.
+Please note that ChordPro files should still be entered using C D E F G A B notation; 
+Songsheet Generator will not recognize Italian Notation in the ChordPro files.
+</li>
+<li>Several new chorus marking styles are available, including shaded filled box and tabbed indentation;
+to accomodate these choices, the Printer Options page now contains a dropdown menu of chorus marking styles. 
+</li>
+<li>The Release Notes document can be viewed directly from the Help Menu, as it is now
+packaged in the Java jarfile.</li>
+<li>On the Macintosh, the online help is now installed locally.  (Pure Java users will still need 
+to be connected to the Internet in order to connect to the help on the tenbyten.com web site.)</li>
+<li>Registration is now required in order to permanently disable a nag screen that appears from time to time.</li>
+<li>This software should run natively on both PPC and Intel Macintosh systems.</li>
+</ul>
+
+<p>Fixes and minor changes:
+<ul>
+<li>A manually-selected page orientation (portrait or landscape) in the Printer Setup dialog or Print dialog
+will now be saved and reflected properly in the subsequent Printer Setup dialog and Print dialog. 
+When a different Page Layout is chosen, however, or after visiting the Options dialog,
+the orientation will revert to the default for that layout.
+The default orientation is landscape for "2 Discrete Cells Per Page,"  and portrait for all other layouts.
+</li>
+<li>Chords are better aligned in the text output.  Since no hyphenation is used in the text output,
+    however, some chords will not align exactly.  
+    Further detailed spacing alignment must be performed manually. </li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="major_version">
+<h2>Songsheet Generator 1.0</h2>
+
+<div class="minor_version">
+<dl>
+<dt>
+Version 1.0; December 2004
+</dt>
+<dd>
+<p> New features in this release:
+<ul>
+<li>Added Full Screen support.  
+<br>
+This is kind of a big deal, since it was the one feature missing from the Java version.
+(So now I am finally calling this version 1.0!)  
+OK, Print Preview is still missing... but since Mac&nbsp;OS&nbsp;X gives that for free, there is no plan to add Print Preview.
+<br><em>Note:</em>  Because of instability in previous Java releases for Mac&nbsp;OS&nbsp;X, 
+	full screen mode is only supported when Java 1.4.2 Update 1 installed.</li>
+</ul>
+<p>Fixes and minor changes:
+<ul>
+<li>Fixed alignment of text fields on the HTML options page.</li>
+<li>Fixed the background color of the options pages on Mac&nbsp;OS&nbsp;X.</li>
+</ul>
+</dd>
+
+
+<dt>
+Version 0.9.2.0
+</dt>
+<dd>
+<p>Fixes and minor changes:
+<ul>
+<li>Comment lines preceded by a set of chords with no lyrics and no blank lines will now print correctly.</li>
+</ul>
+</dd>
+
+<dt>
+Version 0.9.1.0; July 2004
+</dt>
+<dd>
+<p>  New features in this release:
+<ul>
+<li>The default behavior of Songsheet Generator has always been to apply all of the Options settings when leaving the Options dialog.
+	This can have the undesired effect of resetting transposition and &quot;print chords&quot; settings in the &quot;Songs to print&quot; list &mdash;
+	when, for instance, simply a font size is changed.  This behavior is by design, but it was pointed out that it is sometimes less 
+	than helpful.  
+	So, there is now by default a warning message before the transposition and &quot;print chords&quot; settings are applied;
+	and, optionally,  songs in the &quot;Songs to print&quot; list will be unaffected.  
+	<br>This warning message can be turned off, to return to the usual SG behavior.
+	<br><em>Note:</em> no warning is given when changing these settings via the menu.
+</li>
+<li>Added Page Numbering!  
+	<br>Now it is possible to print a full-featured paper songbook using Songsheet Generator.
+	The Table of Contents will reflect the proper page numbers.  
+	<br><em>Note:</em> this is not the same as Automatic Song Numbering, a separate feature.
+	Both Page Numbering and Automatic Song Numbering can be used at the same time.  Using them both produces
+	a hymnbook-like system, where songs have separate numbers from the physical pages that they appear on.
+	</li>
+
+<li>Added footer support for Printer<!--, Full Screen--> and HTML output destinations.  
+The footer text will appear at the bottom of the physical printed page, at the bottom of the screen, or at the end of the HTML &lt;body&gt;.
+Any text can be used, but the following control codes can also be used to format the footer:
+		<table class="definition" rules="all">
+		<thead>
+		<tr><th>Code</th><th>Description</th><th>Example Output</th></tr>
+		</thead>
+		<tbody>
+		<tr><td><code>%l</code> (lowercase 'L')</td><td>Left-justify text following (printer &amp; full screen only)</td></tr>
+		<tr><td><code>%c</code></td><td>Center-justify text following (printer &amp; full screen only)</td></tr>
+		<tr><td><code>%r</code></td><td>Right-justify text following (printer &amp; full screen only)</td></tr>
+		<tr><td><code>%p</code></td><td>Current page number</td></tr>
+		<tr><td><code>%n</code></td><td>Total number of pages</td></tr>
+		<tr><td><code>%t</code></td><td>Song title</td><td>My Song</td></tr>
+		<tr><td><code>%T</code></td><td>Song title, with subtitle, if it exists (in parenthesis)</td><td>My Song (Reprise)</td></tr>
+		<tr><td><code>%f</code></td><td>Song filename</td><td>my_song.txt</td></tr>
+		<tr><td><code>%F</code></td><td>Song filename (complete path)</td><td>C:\songs\my_song.txt</td></tr>
+		<tr><td><code>%x</code></td><td>Song transpose</td><td>+3</td></tr>
+
+		<tr><td><code>%dy</code></td><td>Two-digit representation of current year</td><td>04</td></tr>
+		<tr><td><code>%dY</code></td><td>Four-digit representation of current year</td><td>2004</td></tr>
+		<tr><td><code>%dm</code></td><td>Numeric representation of current month, with leading zeros</td><td>01 to 12</td></tr>
+		<tr><td><code>%dn</code></td><td>Numeric representation of current month, without leading zeros</td><td>1 to 12</td></tr>
+		<tr><td><code>%dM</code></td><td>Short textual representation of current month, three letters</td><td>Jan to Dec (localized)</td></tr>
+		<tr><td><code>%dF</code></td><td>Full textual representation of current month</td><td>January to December (localized)</td></tr>
+		<tr><td><code>%dd</code></td><td>Current day of the month, 2 digits, with leading zeros</td><td>01 to 31</td></tr>
+		<tr><td><code>%dj</code></td><td>Current day of the month, 2 digits, without leading zeros</td><td>1 to 31</td></tr>
+		<tr><td><code>%dD</code></td><td>Short textual representation of the current day of the week</td><td>Sun through Sat (localized)</td></tr>
+		<tr><td><code>%dl</code> (lowercase 'L')</td><td>Full textual representation of the current day of the week</td><td>Sunday through Saturday (localized)</td></tr>
+		<tr><td><code>%dr</code></td><td><a href="http://www.faqs.org/rfcs/rfc2822">RFC 2822</a> formatted date</td><td>Thu, 21 Dec 2000 16:01:07 +0200</td></tr>
+
+		<tr><td><code>%%</code></td><td>Percent sign ('%')</td></tr>
+		</tbody>
+		</table>
+</li>
+</ul>
+<p>Fixes and minor changes:
+<ul>
+<li>The printable area of a printed page is now set correctly the first time.</li>
+<li>Parameters for the Page Setup Dialog are now retrieved correctly for the default printer.</li>
+<li>A chorus that runs onto the next page wll now correctly receive the (optional) chorus marking on the initial page.</li>
+<li>A chorus that is not properly closed with {eoc} or {end_of_chorus} before the end of the song will now receive an (optional) chorus marking.</li>
+<li>Even if the last line in a song file does not end with and end-of-line character, the line will now print correctly.</li>
+<li>Chords appearing without lyrics on the last line of a song file will now print correctly.</li>
+<li>Empty {subtitle:} directives are ignored.</li>
+<li>Increased the width of the mini-preview window to its typical (Windows version) size.</li>
+<li>Changed the name of the properties file on Mac&nbsp;OS&nbsp;X to com.tenbyten.SG02.props 
+	(from sg02.props; the file is located in ~/Library/Preferences).
+	Additionally, the chordrc file is now com.tenbyten.SG02.chordrc.</li>
+</ul>
+</dd>
+
+<dt>
+Version 0.8.1.0; February 2004
+</dt>
+<dd>
+<p>Polishing basic functionality, plus porting ongoing fixes from the Windows version. 
+This is still considered Beta software, although almost all of the features from
+the Windows version have now been properly implemented.
+<p> Changes to the software in this release:
+<ul>
+  <li>Added the "Other..." choice for the transpose menus.</li>
+  <li>Text styles are now properly controlled from the properties file.</li>
+  <li>Added support for the ChordPro <code>{new_page}</code> (<code>{np}</code>),
+		<code>{new_physical_page}</code> (<code>{npp}</code>), and
+		<code>{column_break}</code> (<code>{colb}</code>) directives.
+		<br><code>{np}</code> will cause a &quot;cell break&quot; in the Two and Four Discrete Cells per Page printing modes, 
+		and a column break in the Two Flowing Columns printing mode.  It will cause a physical page break otherwise.
+		<br><code>{npp}</code> will always force a physical page break.
+		<br><code>{colb}</code> will force a column break in the Flowing Columns printing modes,
+		which amounts to a physical page break in the One Flowing Column printing mode.  
+		It has no effect in the Discrete Cells printing modes.
+		<br><em>Note:</em>  these directives have no effect in the Text and HTML File output destinations.</li>
+  <li> Unicode (UTF-8) chordpro files now will be imported correctly, as long as they have the byte-order mark.
+		<br>Valid encodings: UTF-8, UTF-16 (little- or big-endian), and default system text encoding.
+		<br>The Text File Output Destination will write with the same encoding as the source file.
+		<br>HTML will always be output as UTF-8.
+		</li>
+	<li>Removed the extra <code>&lt;div class=sg_newsong&gt;</code> tag at the end of the HTML output.</li>
+</ul>
+  </dd>
+
+<dt>
+Version 0.7.0.0; December 2003
+</dt>
+<dd>
+<p>  This is still considered Beta software, although almost all of the features from
+the Windows version have now been properly implemented.
+<p>  New features in this release:
+<ul>
+<li>Added the Page Setup command.</li>
+<li> HTML output is now writing UTF-8.  Using UTF-8 overcomes the display
+      problems that were formerly encountered with various web browsers and
+	  language settings.</li>
+<li> HTML output adds additional style tags for the song body and the Table
+of Contents:
+<code>sg_song</code>,  <code>sg_toc</code>, <code>sg_toc_header</code>, <code>sg_toc_contents</code> now allow
+	  further control over the appearance of the HTML output.</li>
+<li> Added a feature to automatically number the printed songs.  The song 
+      numbering is also reflected in the Table of Contents.  A checkbox for
+      this feature can be found on the General Options dialog.  The setting
+      applies to all of the Output Destinations <!--, except for the Full Screen
+	  Presentation-->.  The number is never shown in the Mini-Preview.
+	  <br><em>Note:</em>  Automatic Song Numbering is not the same as page
+	  numbering (a feature that is not yet supported).</li>
+<li> Created this Release Notes document.</li>
+  </ul>
+
+	  <p>Fixes and minor changes:
+
+  <ul>
+<li> HTML output now validates as HTML 4.01 strict.  Related to this
+change, the internal song linking now uses <code>&lt;div class=sg_song id=...&gt;</code>
+	instead of <code>&lt;a name=...&gt;</code>.</li>
+	  <li> Fixed a printing problem in which the first line of a chorus would not
+      receive the full "line" chorus mark, when it had no chords, and SG was
+	  set to print chords.</li>
+  </ul>
+
+  <p>Known problems:
+
+  <ul>
+	  <li> Unicode (UTF-8) and multibyte text files may not be imported correctly.
+		UTF-16 files should work OK.  A UTF-16 song file, when saving to text, will be output as UTF-16.
+		Not a lot of testing has been done with these sorts of files.
+		This will remain a problem until further notice.
+		<em>Notice: UTF-8 works as noted in 0.8.1.0.</em></li>
+
+		<li>Full-Screen Presentation (from the Windows version) has still not been implemented at all.</li>
+
+		<li>Launching the editor program now works mostly correctly on Mac&nbsp;OS&nbsp;X, but maybe not completely.  
+		Anyway, if an editor is not properly defined, SG will resort to using the TextEdit application
+		(this is the default setting).</li>
+  </ul>
+	  </dd>
+
+<dt>
+Version 0.6.0.0; October 2003
+</dt>
+<dd>
+<p>Polishing basic functionality, plus porting ongoing fixes from the Windows version. 
+<p> Changes to the software in this release:
+
+<ul>
+  <li>Chords grids are now sorted alphabetically.</li>
+  <li>Song title sorting has finally been fixed in the Print List.</li>
+  <li>Minor fixes in the chord definition syntax.</li>
+  <li>Implemented context menu on the Songs List.</li>
+	<li> Added the "Set Path to Songs..." command in the Options Menu.
+	The browse dialog is now also populated with the current path.</li>
+	<li>Removed references to the older Apple MRJ classes. </li>
+  </ul>
+  </dd>
+
+<dt>
+Version 0.5.0.0; September 2003
+</dt>
+<dd>
+<p>Finishing up basic functionality, plus porting ongoing fixes from the Windows version. 
+<p> Changes to the software in this release:
+
+<ul>
+	<li>Reworked the About Box to make it consistent with the Mac&nbsp;OS&nbsp;X look-and-feel.
+	Thanks to Benjamin Johnson, who helped to clean up the code.</li>
+<li> Added the ability to print chord grids.  This feature may be turned
+      on and off via a checkbox in the General Options dialog.  The size of
+      the grids is automatically varied to fit within the page constraints:
+      Songsheet Generator will attempt to fit the largest possible grids 
+      onto the fewest possible lines.
+	  <br>
+      The most commonly used chord grids have been built into the Songsheet 
+      Generator executable (see below).  Additional chord grids may be 
+      defined in song files, via the standard ChordPro chord grid definition
+      syntax:
+	  <div class="inlineindent"><code>{define: &lt;chord&gt; base-fret &lt;base&gt; frets &lt;Low-E&gt; &lt;B&gt; &lt;G&gt; &lt;D&gt; &lt;A&gt; &lt;E&gt;}</code></div>
+	  <br>For example:
+	  <div class="inlineindent"><code>{define: E5 base-fret 7 frets 0 1 3 3 x x}</code></div>
+	  <br>Chords grids defined in songs will override any built-in definitions.
+	  <br>
+      In addition, an extension to the standard format is recognized by
+      Songsheet Generator, which adds fingering support to the grid.
+      Fingerings are printed below the chord grids.
+      The syntax for the fingering definition follows:
+	  <div class="inlineindent"><code>{define: &lt;chord&gt; base-fret &lt;base&gt; frets &lt;Low-E&gt; &lt;B&gt; &lt;G&gt; &lt;D&gt; &lt;A&gt; &lt;E&gt; fingers &lt;Low-E&gt; &lt;B&gt; &lt;G&gt; &lt;D&gt; &lt;A&gt; &lt;E&gt;}</code></div>
+	  <br>For example:
+	  <div class="inlineindent"><code>{define: E5 base-fret 7 frets 0 1 3 3 x x fingers - 1 2 3 - -}</code></div>
+	  <br>
+      The following chords have been built into Songsheet Generator.  Songs
+      using chords noted in this list will benefit automatically from the
+      new chord grids feature:
+	  <div class="inlineindent">Ab, Ab+, Ab4, Ab7, Ab11, Absus, Absus4, Abdim, Abmaj, Abmaj7,
+          Abmin, Abm, Abm7, A, A+, A40, A6, A7, A7+, A7(9+), A9, A11, A13,
+          A7sus4, A9sus, Asus, Asus2, Asus4, Adim, Amaj, Amaj7, Adim,
+          Amin, A/D, A/F#, A/G#, Am, Am#7, Am(7#), Am6, Am7, Am7sus4, Am9,
+          Am/G, Amadd9, Am(add9), A#, A#+, A#4, A#7, A#sus, A#sus4, A#maj,
+          A#maj7, A#dim, A#min, A#m, A#m7, Bb, Bb+, Bb4, Bb6, Bb7, Bb9,
+          Bb11, Bbsus, Bbsus4, Bbmaj, Bbmaj7, Bbdim, Bbmin, Bbm, Bbm7,
+          Bbm9, B, B+, B4, B7, B7+, B7+5, B7#9, B7(#9), B9, B11, B11/13,
+          B13, Bsus, Bsus4, Bmaj, Bmaj7, Bdim, Bmin, B/F#, BaddE, B(addE),
+          BaddE/F#, Bm, Bm6, Bm7, Bmmaj7, Bm(maj7), Bmsus9, Bm(sus9),
+          Bm7b5, C, C+, C4, C6, C7, C9, C9(11), C11, Csus, Csus2, Csus4,
+          Csus9, Cmaj, Cmaj7, Cmin, Cdim, C/B, Cadd2/B, CaddD, C(addD),
+          Cadd9, C(add9), Cm, Cm7, Cm11, C#, C#+, C#4, C#7, C#7(b5),
+          C#sus, C#sus4, C#maj, C#maj7, C#dim, C#min, C#add9, C#(add9),
+          C#m, C#m7, Db, Db+, Db7, Dbsus, Dbsus4, Dbmaj, Dbmaj7, Dbdim,
+          Dbmin, Dbm, Dbm7, D, D+, D4, D6, D7, D7#9, D7(#9), D9, D11,
+          Dsus, Dsus2, Dsus4, D7sus2, D7sus4, Dmaj, Dmaj7, Ddim, Dmin,
+          D/A, D/B, D/C, D/C#, D/E, D/G, D5/E, Dadd9, D(add9), D9add6,
+          D9(add6), Dm, Dm6(5b), Dm7, Dm#5, Dm(#5), Dm#7, Dm(#7), Dm/A,
+          Dm/B, Dm/C, Dm/C#, Dm9, D#, D#+, D#4, D#7, D#sus, D#sus4, D#maj,
+          D#maj7, D#dim, D#min, D#m, D#m7, Eb, Eb+, Eb4, Eb7, Ebsus,
+          Ebsus4, Ebmaj, Ebmaj7, Ebdim, Ebadd9, Eb(add9), Ebmin, Ebm,
+          Ebm7, E, E+, E5, E6, E7, E7#9, E7(#9), E7(5b), E7b9, E7(b9),
+          E7(11), E9, E11, Esus, Esus4, Emaj, Emaj7, Edim, Emin, Em, Em6,
+          Em7, Em/B, Em/D, Em7/D, Emsus4, Em(sus4), Emadd9, Em(add9), F,
+          F+, F+7+11, F4, F6, F7, F9, F11, Fsus, Fsus4, Fmaj, Fmaj7, Fdim,
+          Fmin, F/A, F/C, F/D, F/G, F7/A, Fmaj7/A, Fmaj7/C, Fmaj7(+5),
+          Fadd9, F(add9), FaddG, FaddG, Fm, Fm6, Fm7, Fmmaj7, F#, F#+,
+          F#7, F#9, F#11, F#sus, F#sus4, F#maj, F#maj7, F#dim, F#min,
+          F#/E, F#4, F#m, F#m6, F#m7, F#m7-5, F#m/C#m, Gb, Gb+, Gb7, Gb9,
+          Gbsus, Gbsus4, Gbmaj, Gbmaj7, Gbdim, Gbmin, Gbm, Gbm7, G, G+,
+          G4, G6, G7, G7+, G7b9, G7(b9), G7#9, G7(#9), G9, G9(11), G11,
+          Gsus, Gsus4, G6sus4, G6(sus4), G7sus4, G7(sus4), Gmaj, Gmaj7,
+          Gmaj7sus4, Gmaj9, Gmin, Gdim, Gadd9, G(add9), G/A, G/B, G/D,
+          G/F#, Gm, Gm6, Gm7, Gm/Bb, G#, G#+, G#4, G#7, G#sus, G#sus4,
+		  G#maj, G#maj7, G#dim, G#min, G#m, G#m6, G#m7, G#m9maj7, G#m9(maj7)</div>
+
+		  <br>Chord grids are not yet supported in the Text or HTML output.</li>
+  </ul>
+</dd>
+
+<dt>
+Version 0.3.0.0; September 2003
+</dt>
+<dd>
+<p>This was the first mostly-fully-functional version of Songsheet Generator written in the Java programming language.
+</dd>
+
+<dt>
+Version 0.0.0.1; March 2003
+</dt>
+<dd>
+<p>Java code first checked into CVS for a version of Songsheet Generator that would run on Mac&nbsp;OS&nbsp;X.
+
+</dl>
+</div>
+</div>
+
+<div class="copyright">
+<p>Copyright &copy; 1995-2015,
+<a href="https://www.tenbyten.com/software/">Ten by Ten Software</a>.
+<p style="font-size: smaller">
+Mac&nbsp;OS is a registered trademark of Apple Computer, Inc.
+Java and Solaris are trademarks or registered trademarks of Sun Microsystems, Inc. in the United States and other countries.
+Windows is a registered trademark of Microsoft Corporation in the United States and other countries.
+</div>
+
+</body>
+</html>

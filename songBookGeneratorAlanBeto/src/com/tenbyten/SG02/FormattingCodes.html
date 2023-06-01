@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Songsheet Generator Text Formatting Control Codes</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="UTF-8" />
+	<style type="text/css">
+		body { font-family: sans-serif; }
+		table.definition {  width:100% }
+		th { border-bottom: 1px solid #dddddd; background: #eeeeee }
+		td { border-bottom: 1px solid #dddddd; }
+		th.code, td.code { width:10%; text-align:center }
+		th.desc { width:50%; text-align:center }
+		th.note { width:20%; text-align:center }
+		th.sample { width:20%; text-align:center }
+		td.desc { text-align:left }
+		td.note { text-align:left }
+		td.sample {  text-align:left }
+	</style>
+</head>
+<body>
+<p>The following control codes can be used to format the title, subtitle, and footer in Songsheet Generator. 
+With a few restrictions, they can also be used in comments.
+</p>
+<p>
+<table class="definition" rules="all">
+	<thead>
+		<tr><th class="code">Song<br>Information</th>
+			<th class="desc">Description</th>
+			<th class="note">Notes</th>
+			<th class="sample">Sample Output</th></tr>
+	</thead>
+	<tbody>
+		<tr><td class="code"><code>%t</code></td>
+			<td>Song title</td><td></td><td>My Song</td></tr>
+		<tr><td class="code"><code>%s</code></td>
+			<td>Song subtitle</td><td></td><td>Reprise</td></tr>
+		<tr><td class="code"><code>%T</code></td>
+			<td>Song title, with subtitle, if it exists (in parenthesis)</td><td></td><td>My Song (Reprise)</td></tr>
+		<tr><td class="code"><code>%f</code></td>
+			<td>Song filename</td><td></td><td>my_song.txt</td></tr>
+		<tr><td class="code"><code>%F</code></td>
+			<td>Song filename (complete path)</td><td></td><td>C:\songs\my_song.txt</td></tr>
+		<tr><td class="code"><code>%x</code></td>
+			<td>Song transpose in half steps</td>
+			<td>If the value is zero, nothing will be printed</td>
+			<td>+3</td></tr>
+		<tr><td class="code"><code>%k</code></td>
+			<td>Song key (transposition will apply)</td></tr>
+		<tr><td class="code"><code>%A</code></td>
+			<td>Song artist</td></tr>
+		<tr><td class="code"><code>%G</code></td>
+			<td>Song copyright</td></tr>
+		<tr><td class="code"><code>%N</code></td>
+			<td>Total number of pages of song</td></tr>
+		<tr><td class="code"><code>%P</code></td>
+			<td>Current page number of song</td></tr>
+		<tr><td class="code"><code>%C</code></td>
+			<td>Capo value (if the value is zero: nothing, not even a blank, will print).</td></tr>
+	</tbody>
+</table>
+</p>
+
+<p>
+<table class="definition" rules="all">
+	<thead>
+		<tr><th class="code">Dates</th>
+			<th class="desc">Description</th>
+			<th class="note">Notes</th>
+			<th class="sample">Sample Output</th></tr>
+
+	</thead>
+	<tbody>
+		<tr><td class="code"><code>%dy</code></td>
+			<td>Two-digit representation of current year</td><td></td><td>04</td></tr>
+		<tr><td class="code"><code>%dY</code></td>
+			<td>Four-digit representation of current year</td><td></td><td>2004</td></tr>
+		<tr><td class="code"><code>%dm</code></td>
+			<td>Numeric representation of current month, with leading zeros</td><td></td><td>01 to 12</td></tr>
+		<tr><td class="code"><code>%dn</code></td>
+			<td>Numeric representation of current month, without leading zeros</td><td></td><td>1 to 12</td></tr>
+		<tr><td class="code"><code>%dM</code></td>
+			<td>Short textual representation of current month, three letters</td><td></td><td>Jan to Dec (localized)</td></tr>
+		<tr><td class="code"><code>%dF</code></td>
+			<td>Full textual representation of current month</td><td></td><td>January to December (localized)</td></tr>
+		<tr><td class="code"><code>%dd</code></td>
+			<td>Current day of the month, 2 digits, with leading zeros</td><td></td><td>01 to 31</td></tr>
+		<tr><td class="code"><code>%dj</code></td>
+			<td>Current day of the month, 2 digits, without leading zeros</td><td></td><td>1 to 31</td></tr>
+		<tr><td class="code"><code>%dD</code></td>
+			<td>Short textual representation of the current day of the week</td><td></td><td>Sun through Sat (localized)</td></tr>
+		<tr><td class="code"><code>%dl</code><br><small>(lowercase 'L')</small></td><td>Full textual representation of the current day of the week</td><td></td><td>Sunday through Saturday (localized)</td></tr>
+		<tr><td class="code"><code>%dr</code></td>
+			<td><a href="http://www.faqs.org/rfcs/rfc2822">RFC 2822</a> formatted date</td><td></td><td>Thu, 21 Dec 2000 16:01:07 +0200</td></tr>
+	</tbody>
+</table>
+</p>
+
+<p>
+<table class="definition" rules="all">
+	<thead>
+		<tr><th class="code">Data<br>Values</th>
+			<th class="desc">Description</th>
+			<th class="note">Notes</th>
+			<th class="sample">Sample Output</th></tr>
+
+	</thead>
+	<tbody>
+		<tr><td class="code"><code>%&rsquo;<i>abc</i>&rsquo;</code></td>
+			<td>Data key value
+				(<i>abc</i> is a key; <i>xyz</i>, its value, will be printed).</td>
+				<td>Quotes are required as shown</td></tr>
+		<tr><td class="code"><code>%?<i>jkl</i>&quot;xyz&quot;</code></td>
+			<td>Value query
+				<i>jkl</i> is a format code; if the value of <i>jkl</i> is not empty, then 
+				<i>xyz</i> will be evaluated and printed; <i>xyz</i> may contain nested format codes).</td>
+				<td>Quotes are required as shown.
+				 For example, to print copyright in parenthesis but only if copyright is set: <br><code>%?G&quot;(%G)&quot;</code></td></tr>
+		<tr><td class="code"><code>%?!<i>jkl</i>&quot;xyz&quot;</code></td>
+			<td>Value query (negative)
+				<i>jkl</i> is a format code; if the value of <i>jkl</i> is empty, then 
+				<i>xyz</i> will be evaluated and printed; <i>xyz</i> may contain nested format codes).</td>
+				<td>Quotes are required as shown.
+				 For example, to print &quot;Artist Unknown&quot; if artist is not set: <br><code>%?!A&quot;Artist Unknown&quot;</code></td></tr>
+	</tbody>
+</table>
+</p>
+
+<p>
+<table class="definition" rules="all">
+	<thead>
+		<tr><th class="code">Special<br>Formatting</th>
+			<th class="desc">Description</th>
+			<th class="note">Notes</th>
+			<th class="sample">Sample Output</th></tr>
+
+	</thead>
+	<tbody>
+		<tr><td class="code"><code>%%</code></td>
+			<td>Percent sign ('%')</td></tr>
+		<tr><td class="code"><code>\n</code><br><small>(backslash followed by 'n')</small></td>
+			<td>Manual line break</td><td>Not supported in comments</td></tr>
+		<tr><td class="code"><code>%l</code><br><small>(lowercase 'L')</small></td>
+			<td>Left-justify text following </td><td>Not supported in comments</td></tr>
+		<tr><td class="code"><code>%c</code></td>
+			<td>Center-justify text following </td><td>Not supported in comments</td></tr>
+		<tr><td class="code"><code>%r</code></td>
+			<td>Right-justify text following </td><td>Not supported in comments</td></tr>
+	</tbody>
+</table>
+</p>
+</body>
+</html>
